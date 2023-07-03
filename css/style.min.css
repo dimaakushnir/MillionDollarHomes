@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -1934,6 +1935,91 @@ body.lock {
   }
 }
 
+.rootpage {
+  color: #5e5373;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  animation: change-bg 10s linear infinite;
+}
+
+.rootpage-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  font-size: 0;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.rootpage-body {
+  position: relative;
+  padding: 30px;
+  flex: 1 1 auto;
+}
+
+.rootpage h1 {
+  font-size: 40px;
+  font-family: "Caveat";
+  margin: 0px 0px 30px 0px;
+}
+
+.rootpage h2 {
+  font-family: "Caveat";
+  font-size: 22px;
+  margin: 0px 0px 15px 0px;
+}
+
+.rootpage-pages {
+  margin: 0px 0px 30px 0px;
+  list-style: none;
+  counter-reset: item;
+}
+
+.rootpage-pages li {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0px 10px 0px;
+  font-family: "Caveat";
+}
+.rootpage-pages li a {
+  font-family: "Caveat";
+  font-size: 20px;
+  text-decoration: underline;
+  color: #118777;
+}
+.rootpage-pages li a:hover {
+  text-decoration: none;
+}
+
+.rootpage-pages li:before {
+  content: counter(item) ".";
+  counter-increment: item;
+  margin: 0px 10px 0px 0px;
+}
+
+@keyframes change-bg {
+  0% {
+    background-color: #A0D1E6;
+  }
+  25% {
+    background-color: #98FF98;
+  }
+  50% {
+    background-color: #FFA07A;
+  }
+  75% {
+    background-color: #E6E6FA;
+  }
+  100% {
+    background-color: #A0D1E6;
+  }
+}
 .subscribe-block__main {
   position: relative;
   padding: 110px 0;
@@ -2242,6 +2328,123 @@ body.lock {
 @media (max-width: 479.98px) {
   .form-subcsribe__privacy {
     font-size: 10px;
+  }
+}
+
+.formkit-fields {
+  display: block !important;
+}
+
+.formkit-form > div {
+  padding: 0 !important;
+}
+
+.formkit-alert {
+  font-size: 16px !important;
+  margin: 0 0 15px 0 !important;
+}
+@media (max-width: 991.98px) {
+  .formkit-alert {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .formkit-alert {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 479.98px) {
+  .formkit-alert {
+    font-size: 13px !important;
+  }
+}
+
+.formkit-alert-error {
+  color: #ea4110 !important;
+}
+
+.formkit-field:not(:last-child) {
+  margin: 0 0 20px 0 !important;
+}
+@media (max-width: 479.98px) {
+  .formkit-field:not(:last-child):not(:last-child) {
+    margin: 0 0 15px 0 !important;
+  }
+}
+
+.formkit-input {
+  width: 100% !important;
+  border: 1px solid #e3e3e3 !important;
+  height: 50px;
+  padding: 5px 15px;
+  overflow: hidden;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border-radius: 5px !important;
+  color: #323232 !important;
+}
+@media (max-width: 991.98px) {
+  .formkit-input {
+    height: 42.5px;
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .formkit-input {
+    height: 40px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 479.98px) {
+  .formkit-input {
+    height: 35px;
+    font-size: 13px !important;
+  }
+  .formkit-input:not(:last-child) {
+    margin: 0 0 15px 0;
+  }
+}
+
+.formkit-submit {
+  font-size: 16px;
+  padding: 5px 25px;
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  padding: 5px 20px;
+  background-color: #000 !important;
+  overflow: hidden;
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: 600 !important;
+  border-radius: 5px !important;
+}
+.formkit-submit:not(:last-child) {
+  margin: 0 0 15px 0;
+}
+.formkit-submit:hover {
+  animation: btnAnimation 0.3s ease forwards !important;
+}
+@media (max-width: 991.98px) {
+  .formkit-submit {
+    height: 42.5px;
+    font-size: 15px !important;
+    padding: 5px 22.5px;
+  }
+}
+@media (max-width: 767.98px) {
+  .formkit-submit {
+    height: 40px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 479.98px) {
+  .formkit-submit {
+    height: 35px;
+    font-size: 13px !important;
   }
 }
 
